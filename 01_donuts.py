@@ -9,9 +9,14 @@ Exemplo: donuts(5) retorna 'Number of donuts: 5'
 e donuts(23) retorna 'Number of donuts: many'
 """
 
+
 def donuts(count):
     # +++ SUA SOLUÇÃO +++
-    return
+    # if count >= 10:
+    #     return 'Number of donuts: many'
+    # else:
+    #     return f'Number of donuts: {count}'
+    return f'Number of donuts: many' if count >= 10 else f'Number of donuts: {count}'
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---

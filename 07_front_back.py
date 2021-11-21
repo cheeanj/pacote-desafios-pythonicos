@@ -12,7 +12,21 @@ a-frente + b-frente + a-trás + b-trás
 """
 def front_back(a, b):
     # +++ SUA SOLUÇÃO +++
-    return
+    if len(a) % 2 == 0:
+        af = a[:len(a)//2]
+        at = a[len(a)//2:]
+    else:
+        af = a[:len(a)//2+1]
+        at = a[len(a)//2+1:]
+
+    if len(b) % 2 == 0:
+        bf = b[:len(b)//2]
+        bt = b[len(b)//2:]
+    else:
+        bf = b[:len(b)//2+1]
+        bt = b[len(b)//2+1:]
+
+    return af + bf + at + bt
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---

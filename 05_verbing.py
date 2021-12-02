@@ -19,6 +19,25 @@ def verbing(s):
         return f'{s}ing'
     else:
         return s
+    
+    
+def verbing_segundo(s):
+    if(len(s) <3):
+        return s
+    
+    if s[-3:] == 'ing':
+        return ''.join([s,'ly'])
+
+    return ''.join((s,'ing'))
+
+
+def verbing_terceiro(s):
+    if len(s) >= 3:
+        if s.endswith('ing'):
+            s = ''.join([s, 'ly'])
+        else:
+            s = ''.join([s, 'ing'])
+    return s
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 

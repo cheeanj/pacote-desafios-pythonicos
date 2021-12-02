@@ -19,6 +19,22 @@ def fix_start(s):
     return s[0] + s[1:].replace(s[0], '*')
 
 
+def fix_start_segundo(s):
+    primeira_letra = s[0]
+    #contador_primeira = 0
+    #nova_palavra=''
+
+    #for c in s:
+    #  if c==primeira_letra:
+    #    contador_primeira+=1
+    #    if contador_primeira >1:
+    #      c='*'
+    #  nova_palavra+=c
+    #return nova_palavra
+
+    return ''.join([primeira_letra, s[1:].replace(primeira_letra, '*')])
+
+
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
 def test(f, in_, expected):

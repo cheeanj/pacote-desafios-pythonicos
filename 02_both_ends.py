@@ -15,6 +15,7 @@ def both_ends(s):
     #     return s[:2] + s[-2:]
 
     return f'' if len(s) < 2 else s[:2] + s[-2:]
+
     
 def both_ends_segundo(s):
     return '' if len(s) < 2 else ''.join([s[:2], s[-2:]])

@@ -19,6 +19,33 @@ def not_bad(s):
     #     return s
     return notbad if s.find('bad') > s.find('not') else s
 
+
+def not_bad_01(s):
+    palavra1 = 0
+    palavra2 = 0
+    resultado = s
+    cont = 0
+    if 'not' in s:
+        palavra1 = s.index('not')
+        if 'bad' in s:
+            palavra2 = s.index('bad')
+            if palavra2 > palavra1:
+                cont = palavra2 + 3
+                resultado = s.replace(s[palavra1:cont], 'good')
+
+
+def not_bad_02(s):
+    mensagem = s
+    if 'not' in s:
+        indice_not = s.index('not')
+
+        if 'bad' in s:
+            indice_bad = s.index('bad')
+
+            if indice_bad > indice_not:
+                mensagem = s.replace(s[indice_not:indice_bad + 3], 'good')
+                
+
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
 def test(f, in_, expected):

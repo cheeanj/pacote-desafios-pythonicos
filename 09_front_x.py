@@ -24,8 +24,8 @@ def front_x(words):
     #         lista_r.append(words)
     # return sorted(lista_x) + sorted(lista_r)
 
-    lista_x = sorted([words for words in words if words[0] == 'x'])
-    lista_r = sorted([words for words in words if words[0] != 'x'])
+    lista_x = sorted([word for word in words if word[0] == 'x'])
+    lista_r = sorted([word for word in words if word[0] != 'x'])
     return lista_x + lista_r
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---

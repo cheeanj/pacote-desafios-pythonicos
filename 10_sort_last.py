@@ -11,7 +11,7 @@ Dica: Use uma custom key= function para extrair o ultimo elemento de cada tupla.
 """
 
 
-def sort_last(tuples):
+def sort_last_primero(tuples):
     # +++ SUA SOLUÇÃO +++
     return sorted(tuples, key=lambda t: t[-1])
 
@@ -21,6 +21,14 @@ def sort_last(tuples):
 #
 # def last(t):
 #     return t[-1]
+
+
+def sort_last(tuples):
+    for t in range(0, len(tuples)):
+        for i in range(0, len(tuples) - t - 1):
+            if tuples[i][1] > tuples[i + 1][1]:
+                tuples[i + 1], tuples[i] = tuples[i], tuples[i+1]
+    return tuples
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---

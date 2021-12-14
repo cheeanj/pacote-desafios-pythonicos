@@ -11,19 +11,19 @@ Dica: Use uma custom key= function para extrair o ultimo elemento de cada tupla.
 """
 
 
-def sort_last_primero(tuples):
-    # +++ SUA SOLUÇÃO +++
-    return sorted(tuples, key=lambda t: t[-1])
-
-#     tuples.sort(key=last)
-#     return tuples
-#
-#
-# def last(t):
-#     return t[-1]
-
-
 def sort_last(tuples):
+    # +++ SUA SOLUÇÃO +++
+    # return sorted(tuples, key=lambda t: t[-1])
+
+    tuples.sort(key=ultimo)
+    return tuples
+
+
+def ultimo(t):
+    return t[-1]
+
+
+def sort_last_primero(tuples):
     for t in range(0, len(tuples)):
         for i in range(0, len(tuples) - t - 1):
             if tuples[i][1] > tuples[i + 1][1]:

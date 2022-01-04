@@ -8,9 +8,23 @@ Exemplo: [1, 2, 2, 3]
 Irá retornar: [1, 2, 3]
 """
 
+
 def remove_adjacent(nums):
     # +++ SUA SOLUÇÃO +++
-    return
+
+    lista = []
+    for num, proximo_num in zip(nums, nums[1:]):
+        if num != proximo_num:
+            lista.append(num)
+    if len(nums) > 0:
+        lista.append(nums[-1])
+    return lista
+
+    # lista = nums[:1]
+    # for i in nums:
+    #     if i != lista[-1]:
+    #         lista.append(i)
+    # return lista
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---

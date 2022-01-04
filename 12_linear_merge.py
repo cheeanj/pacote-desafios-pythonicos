@@ -8,10 +8,18 @@ modificar as listas recebidas.
 A sua solução deve rodar em tempo linear, ou seja, deve fazer uma
 única passagem em cada uma das listas.
 """
+import heapq  # https://docs.python.org/3/library/heapq.html?highlight=heap#module-heapq
+
 
 def linear_merge(list1, list2):
     # +++ SUA SOLUÇÃO +++
-    return
+
+    return list(heapq.merge(list1, list2))
+
+    # return sorted(list1 + list2)
+
+    # sort ->  list.sort() classifica a lista in-place , alterando os índices da lista e retorna None (como todas as operações no local).
+    # sorted ->  retorna uma lista new sorted, deixando a lista original inalterada
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
